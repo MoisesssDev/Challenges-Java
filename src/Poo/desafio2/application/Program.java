@@ -12,22 +12,22 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		Produto produto = new Produto();
-		
 		System.out.println("Dados do produto: ");
 		System.out.print("Nome: ");
-		produto.name = sc.next();
+		String name = sc.next();
 		System.out.print("Preço: ");
-		produto.price = sc.nextDouble();
+		double price = sc.nextDouble();
 		System.out.print("Quantidade no estoque: ");
-		produto.quantity = sc.nextInt();
+		int quantity = sc.nextInt();
+		
+		Produto produto = new Produto(name, price, quantity);
 		
 		System.out.println();
 		System.out.println("Dados do produto: " + produto);
 		
 		System.out.println();
 		System.out.print("Adicione itens ao estoque: ");
-		int quantity = sc.nextInt();
+		quantity = sc.nextInt();
 		produto.addProduct(quantity);
 		
 		System.out.println();
