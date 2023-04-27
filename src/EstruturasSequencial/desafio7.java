@@ -22,6 +22,8 @@ public class desafio7 {
 
         System.out.println(horas + ":" + minutos + ":" + segundos);
 		
+	
+		
 		sc.close();
 	}
 }
